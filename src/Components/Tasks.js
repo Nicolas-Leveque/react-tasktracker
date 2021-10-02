@@ -1,6 +1,11 @@
+import Task from './Task';
+
 const Tasks = (props) => {
+    
     return (
-        <div></div>
+        <section>
+            <Task data={props.data} />
+        </section>
     );
 }
 
