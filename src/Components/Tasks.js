@@ -1,10 +1,17 @@
 import Task from './Task';
 
-const Tasks = (props) => {
-    
+const Tasks = ({data, onToggle, onDelete}) => {
     return (
         <section>
-            <Task data={props.data} />
+            {data.map((data)=>(
+                <Task
+                    data={data}
+                    key={data.id}
+                    onToggle={onToggle}
+                    onDelete={onDelete}
+                    />
+            ))}
+            
         </section>
     );
 }

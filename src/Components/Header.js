@@ -1,10 +1,11 @@
 import Button from './Button'
 
+
 const Header = (props) => {
     return (
-        <header className="p-6 flex flex-row justify-between border-solid bg-gray-100 ">
+        <header className="p-6 flex flex-row justify-between  bg-green-500 rounded-2xl ">
             <p>React Tasktracker</p>
-            <Button color="green">Add Task</Button>
+            <Button color={props.showAddTask ? 'red' : 'blue'} click={props.toggleAddTask}>Add Task</Button>
         </header>
     );
 }

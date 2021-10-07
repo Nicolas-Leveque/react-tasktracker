@@ -1,9 +1,12 @@
-const Task = (props) => {
+const Task = ({data, onToggle, onDelete}) => {
 
-  console.log(props.data, 'task')
   return (
-    <div>
-      <p>{props.data[0].text}</p>
+    <div className={`p-3 cursor-pointer ${data.reminder ? 'reminder' : ''}`} onDoubleClick={() => {onToggle(data.id)}}>
+      <div className="flex flex-row justify-between">
+        <h3 className="font-bold text-xl">{data.text}</h3>
+        <i className="fas fa-times text-red-500" onClick={() =>{onDelete(data.id)}}></i>
+      </div>
+      <p>{data.day}</p>
     </div>
   );
 }

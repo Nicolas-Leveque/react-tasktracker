@@ -1,8 +1,8 @@
 const Button = (props) => {
     return (
         <button 
-            className={`border-solid bg-green-400 rounded-full px-2`}
-            onClick={props.toggleAddTask}
+            className={`bg-${props.color}-600 rounded-full px-2 text-white`}
+            onClick={props.click} type={props.type}
             >
             {props.children}
         </button>
